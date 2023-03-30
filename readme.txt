@@ -6,14 +6,6 @@ If a player walks into these 'static' barbed wire objects they will be cut and t
 
 Check out the attached video to see what I mean.
 
-Unfortunately, due to apparent limitations with the game engine, you can't turn all barbed wire fences into damage zones as it seems to crash the server if there are too many damage zones in a small area (eg. the hundreds of NW airfield fences). 
-
-But considering very few players ever climb onto high barbed wire fences it shouldn't matter. Most barbed wire fences are disabled in this mod by default to prevent server crashes, but you can turn them on in the config file if you want to try them.
-
-Only the barbed wire road blocks are turned on by default, which seem to work fine on Chernarus and Livonia as they aren't very common unlike the fences that surround military areas.
-
-Certain smaller maps might work fine with all fences enabled, like Namalsk perhaps, which is why I included all barbed wire fences in the config but left most of them turned off by default. Feel free to play around with them if you're running a smaller map.
-
 There is a JSON config that allows you to specify damage zones for various game objects, including how often they damage the player.
 
 Installation Instructions:

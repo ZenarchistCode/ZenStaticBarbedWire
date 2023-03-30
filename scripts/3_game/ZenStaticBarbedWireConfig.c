@@ -1,7 +1,7 @@
 class ZenStaticBarbedWireConfig
 {
 	// Set actual config version (doesn't save to json)
-	private static const string CONFIG_VERSION = "1";
+	private static const string CONFIG_VERSION = "2";
 
 	// Config version 
 	string ConfigVersion = "";
@@ -49,21 +49,21 @@ class ZenStaticBarbedWireConfig
 		WireTypes.Insert(new ZenStaticBarbedWireType("misc_razorwire", "-4.3 -1 -1.1", "4.3 1.1 1.1"));
 
 		// All disabled as I'm guessing creating this many damage zones in DayZ crashes the server -.-
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_fen5_5", "-2.5 0.9 -0.6", "2.6 1.5 -0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_fen5_10", "-5 0.9 -0.6", "5.1 1.5 -0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_fen5_10_d", "-5 0.9 -0.25", "-2 1.5 -1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_1_4", "-2.7 1.6 -0.1", "2.9 1.9 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_1_d", "-2.7 1.6 -0.1", "2.9 1.9 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_2_4", "-2.7 1.6 -0.1", "2.9 1.9 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_2_d", "-2.7 1.6 -0.1", "2.9 1.9 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_3", "-1.5 1.3 -0.1", "1.5 1.5 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_3_nolc", "-1.5 1.3 -0.1", "1.5 1.5 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_corner", "-1.5 1.3 -0.1", "1.5 1.5 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_corner", "-1.5 1.3 -0.1", "1.5 1.5 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_3", "-1.5 1.3 -0.1", "1.5 1.5 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_3_hole", "-1.5 1.3 -0.1", "1.5 1.5 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_9", "-4.5 1.3 -0.1", "4.5 1.5 0.1", false));
-		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_9", "-4.9 1.3 -0.1", "4.1 1.5 0.1", false));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_fen5_5", "-2.5 0.9 -0.6", "2.6 1.5 -0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_fen5_10", "-5 0.9 -0.6", "5.1 1.5 -0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_fen5_10_d", "-5 0.9 -0.25", "-2 1.5 -1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_1_4", "-2.7 1.6 -0.1", "2.9 1.9 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_1_d", "-2.7 1.6 -0.1", "2.9 1.9 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_2_4", "-2.7 1.6 -0.1", "2.9 1.9 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indcnc3_2_d", "-2.7 1.6 -0.1", "2.9 1.9 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_3", "-1.5 1.3 -0.1", "1.5 1.5 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_3_nolc", "-1.5 1.3 -0.1", "1.5 1.5 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_corner", "-1.5 1.3 -0.1", "1.5 1.5 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_corner", "-1.5 1.3 -0.1", "1.5 1.5 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_3", "-1.5 1.3 -0.1", "1.5 1.5 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_3_hole", "-1.5 1.3 -0.1", "1.5 1.5 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc2_9", "-4.5 1.3 -0.1", "4.5 1.5 0.1"));
+		WireTypes.Insert(new ZenStaticBarbedWireType("wall_indfnc_9", "-4.9 1.3 -0.1", "4.1 1.5 0.1"));
 
 		// Generate new default config
 		ConfigVersion			= CONFIG_VERSION;

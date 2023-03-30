@@ -1,8 +1,5 @@
 modded class MissionServer
 {
-	// Store damage zones
-	ref array<ref AreaDamageLoopedDeferred_NoVehicle> StaticBarbedWireDamageZones;
-
 	// Called when server mission initializes
 	override void OnInit()
 	{
@@ -22,7 +19,6 @@ modded class MissionServer
 	// Sets up the barbed wire damage zones
 	private void SetupStaticBarbedWireDamageZones()
 	{
-		StaticBarbedWireDamageZones = new array<ref AreaDamageLoopedDeferred_NoVehicle>;
 		ZenStaticBarbedWireType wireType;
 
 		foreach (ZenStaticBarbedWireObject wirePos : GetZenStaticBarbedWireConfig().WirePositions)
@@ -64,15 +60,14 @@ modded class MissionServer
 					if (debugName.Contains(wirePos.TypeName) || className.Contains(wirePos.TypeName))
 					{
 						// Create damage zone for barbed wire cutting players
-						AreaDamageLoopedDeferred_NoVehicle areaDamage = new AreaDamageLoopedDeferred_NoVehicle(objectsNearWire[x]);
-						areaDamage.SetDamageComponentType(AreaDamageComponentTypes.HITZONE);
-						areaDamage.SetLoopInterval(wireType.LoopInterval);
-						areaDamage.SetDeferDuration(wireType.DeferDuration);
-						areaDamage.SetExtents(wireType.MinExtents.ToVector(), wireType.MaxExtents.ToVector());
-						areaDamage.SetHitZones(wireType.DamageZones);
-						areaDamage.SetAmmoName(wireType.AmmoName);
-						areaDamage.Spawn();
-						StaticBarbedWireDamageZones.Insert(areaDamage);
+						ZenStaticBarbedWire wireObj = ZenStaticBarbedWire.Cast(Object.Cast(GetGame().CreateObject("ZenStaticBarbedWire", "0 0 0")));
+
+						if (wireObj)
+						{
+							wireObj.SetPosition(objectsNearWire[x].GetPosition());
+							wireObj.SetOrientation(objectsNearWire[x].GetOrientation());
+							wireObj.SetupDamageZone(objectsNearWire[x], wireType);
+						}
 					}
 				};
 			}
